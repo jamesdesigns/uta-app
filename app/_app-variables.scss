@@ -22,6 +22,7 @@ $success-light: #00E676 !default;
 $warning-dark: #f39c11 !default;
 $warning-light: #F2C112 !default;
 
+$dark-red: red !default;
 $error-dark: #D84039 !default;
 $error-light: #ED473F !default;
 
@@ -61,7 +62,7 @@ $side-drawer-header-brand: #737373;
 $side-drawer-background: #FFFFFF;
 
 // ActionBar
-$ab-background: $accent;
+$ab-background: $dark-red;
 $ab-color: $white;
 
 // Buttons
