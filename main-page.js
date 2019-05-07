@@ -1,10 +1,10 @@
-var vmModule = require("./main-view-model");
-var builder = require("ui/builder");
-var mapsModule = require("nativescript-google-maps-sdk");
-var permissions = require("nativescript-permissions");
-var application = require("application");
-var Color = require("color").Color;
-var style = require('./map-style.json');
+const vmModule = require("./main-view-model");
+const builder = require("ui/builder");
+const mapsModule = require("nativescript-google-maps-sdk");
+const permissions = require("nativescript-permissions");
+const application = require("application");
+const Color = require("color").Color;
+const style = require('./map-style.json');
 
 function wait(milliSeconds) {
     return new Promise(function(resolve, reject) {

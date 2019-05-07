@@ -1,5 +1,5 @@
-var observable = require("data/observable");
-var HelloWorldModel = (function (_super) {
+const observable = require("tns-core-modules/data/observable");
+const HelloWorldModel = (function (_super) {
     __extends(HelloWorldModel, _super);
     function HelloWorldModel() {
         _super.call(this);
