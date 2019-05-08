@@ -1,59 +1,31 @@
 const observableModule = require("tns-core-modules/data/observable");
 
-
-
-
-
 function HomeItemsViewModel() {
     const viewModel = observableModule.fromObject({
         items: [
             {
-                name: "Item 1",
+                name: "Sign-In / Create Account",
                 description: "Description for Item 1"
             },
             {
-                name: "Item 2",
+                name: "Maps",
                 description: "Description for Item 2"
             },
             {
-                name: "Item 3",
+                name: "Delays",
                 description: "Description for Item 3"
             },
             {
-                name: "Item 4",
+                name: "Privacy",
                 description: "Description for Item 4"
             },
             {
-                name: "Item 5",
+                name: "Notifications",
                 description: "Description for Item 5"
             },
             {
-                name: "Item 6",
+                name: "Feedback",
                 description: "Description for Item 6"
-            },
-            {
-                name: "Item 7",
-                description: "Description for Item 7"
-            },
-            {
-                name: "Item 8",
-                description: "Description for Item 8"
-            },
-            {
-                name: "Item 9",
-                description: "Description for Item 9"
-            },
-            {
-                name: "Item 10",
-                description: "Description for Item 10"
-            },
-            {
-                name: "Item 11",
-                description: "Description for Item 11"
-            },
-            {
-                name: "Item 12",
-                description: "Description for Item 12"
             }
         ]
     });

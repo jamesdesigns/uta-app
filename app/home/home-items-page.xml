@@ -10,9 +10,6 @@
         <Label class="action-bar-title" text="UTA Motion"></Label>
     </ActionBar>
 
-
-
-    <ActionBar title="Geolocation" class="action-bar" />
 	<ScrollView>
 		<StackLayout class="home-panel">
 			<Image src="~/images/map-marker-icon.png" height="60" />
