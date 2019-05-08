@@ -29,7 +29,6 @@ function SettingsViewModel() {
                 description: "Description for Item 6"
             }
         ]
-
     });
 
     return viewModel;
