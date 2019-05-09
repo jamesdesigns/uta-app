@@ -5,6 +5,7 @@
 
     <ActionBar class="action-bar">
         <Label class="action-bar-title" text="Favorites"></Label>
+        <!-- <Image src="~/images/uta-icon.png" stretch="none" ></Image> -->
     </ActionBar>
 
     <GridLayout class="page-content">

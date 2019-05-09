@@ -1,7 +1,11 @@
 require("./bundle-config");
 
-var application = require("tns-core-modules/application");
+const application = require("tns-core-modules/application");
+// const application = require("application");
 
+
+// THIS IS CREATING AN ERROR!!
+// const mapsService = import("nativescript-google-maps-sdk");
 // if (application.ios) {
 //     GMSServices.provideAPIKey("AIzaSyBErqQxBYZtDEDr6IkdfaBkh2a7asZ3Ub4");
 //   }

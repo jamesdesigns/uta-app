@@ -1,13 +1,10 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" xmlns:maps="nativescript-google-maps-sdk" loaded="pageLoaded">
-    <GridLayout>
-        <maps:mapView latitude="{{ latitude }}" longitude="{{ longitude }}"
-                      zoom="{{ zoom }}" minZoom="{{ minZoom }}" maxZoom="{{ maxZoom }}" bearing="{{ bearing }}" mapAnimationsEnabled="{{ mapAnimationsEnabled }}"
-                      tilt="{{ tilt }}" i-padding="50,50,50,50" padding="{{ padding }}" mapReady="onMapReady"
-                      markerSelect="onMarkerEvent" markerBeginDragging="onMarkerEvent"
-                      markerEndDragging="onMarkerEvent" markerDrag="onMarkerEvent"
-                      markerInfoWindowTapped="onMarkerEvent" coordinateTapped="onCoordinateTapped"
-                      cameraChanged="onCameraChanged"
-                      cameraMove="onCameraMove">
+ <Page 
+    xmlns="http://www.nativescript.org/tns.xsd"
+    xmlns:maps="nativescript-google-maps-sdk"
+    >
+  <GridLayout>
+       <maps:mapView mapReady="onMapReady">
+            <!-- Default Info Window Template -->       		
             <maps:mapView.infoWindowTemplate>
                 <StackLayout orientation="vertical" width="200" height="150" >
                     <Label text="{{title}}" className="title" width="125"   />
@@ -16,6 +13,7 @@
                     <Label text="{{'LON: ' + position.longitude}}" className="infoWindowCoordinates"  />
                 </StackLayout>
             </maps:mapView.infoWindowTemplate>
+            <!-- Keyed Info Window Templates -->   
             <maps:mapView.infoWindowTemplates>
                 <template key="testWindow">
                     <StackLayout orientation="vertical" width="160" height="160" >
@@ -25,5 +23,6 @@
                 </template>
             </maps:mapView.infoWindowTemplates>
         </maps:mapView>
-    </GridLayout>
+  </GridLayout>
 </Page>
+
