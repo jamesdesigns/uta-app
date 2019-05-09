@@ -7,7 +7,8 @@
     >
 
     <ActionBar class="action-bar">
-        <Label class="action-bar-title" text="UTA Motion"></Label>
+        <!-- <Label class="action-bar-title" text="UTA Motion"></Label> -->
+        <Image src="~/images/uta-logo.png" stretch="none" ></Image>
     </ActionBar>
 
 	<!-- <ScrollView>
