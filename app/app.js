@@ -1,6 +1,6 @@
-// require("./bundle-config");
+require("./bundle-config");
 
-const application = require("tns-core-modules/application");
+var application = require("tns-core-modules/application");
 
 // if (application.ios) {
 //     GMSServices.provideAPIKey("AIzaSyBErqQxBYZtDEDr6IkdfaBkh2a7asZ3Ub4");

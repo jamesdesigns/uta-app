@@ -8,9 +8,9 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const { NativeScriptWorkerPlugin } = require("nativescript-worker-loader/NativeScriptWorkerPlugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const hashSalt =  Date.now().toString();
+const hashSalt = Date.now().toString();
 
-module.exports = env => {
+module.exports = (env) => {
     // Add your custom Activities, Services and other android app components here.
     const appComponents = [
         "tns-core-modules/ui/frame",
@@ -85,7 +85,7 @@ module.exports = env => {
                 "node_modules",
             ],
             alias: {
-                '~': appFullPath
+                "~": appFullPath
             },
             // don't resolve symlinks to symlinked modules
             symlinks: false
@@ -100,7 +100,7 @@ module.exports = env => {
             "timers": false,
             "setImmediate": false,
             "fs": "empty",
-            "__dirname": false,
+            "__dirname": false
         },
         devtool: sourceMap ? "inline-source-map" : "none",
         optimization: {
@@ -111,13 +111,14 @@ module.exports = env => {
                         name: "vendor",
                         chunks: "all",
                         test: (module, chunks) => {
-                            const moduleName = module.nameForCondition ? module.nameForCondition() : '';
-                            return /[\\/]node_modules[\\/]/.test(moduleName) ||
-                                    appComponents.some(comp => comp === moduleName);
+                            const moduleName = module.nameForCondition ? module.nameForCondition() : " ";
+
+                            return (/[\\/]node_modules[\\/]/).test(moduleName) ||
+                                    appComponents.some((comp) => comp === moduleName);
 
                         },
-                        enforce: true,
-                    },
+                        enforce: true
+                    }
                 }
             },
             minimize: !!uglify,
@@ -127,17 +128,17 @@ module.exports = env => {
                     cache: true,
                     uglifyOptions: {
                         output: {
-                            comments: false,
+                            comments: false
                         },
                         compress: {
                             // The Android SBG has problems parsing the output
                             // when these options are enabled
-                            'collapse_vars': platform !== "android",
-                            sequences: platform !== "android",
+                            "collapse_vars": platform !== "android",
+                            sequences: platform !== "android"
                         }
                     }
                 })
-            ],
+            ]
         },
         module: {
             rules: [
@@ -156,9 +157,9 @@ module.exports = env => {
                                 loadCss: !snapshot, // load the application css if in debug mode
                                 unitTesting,
                                 appFullPath,
-                                projectRoot,
+                                projectRoot
                             }
-                        },
+                        }
                     ].filter(loader => !!loader)
                 },
 
@@ -177,35 +178,40 @@ module.exports = env => {
                     use: "nativescript-dev-webpack/markup-hot-loader"
                 },
 
-                { test: /\.(html|xml)$/, use: "nativescript-dev-webpack/xml-namespace-loader"},
+                { test: /\.(html|xml)$/, 
+                    use: "nativescript-dev-webpack/xml-namespace-loader"},
 
                 {
                     test: /\.css$/,
-                    use: { loader: "css-loader", options: { minimize: false, url: false } }
+                    use: { loader: "css-loader",
+                    options: { minimize: false,
+                        url: false } }
                 },
 
                 {
                     test: /\.scss$/,
                     use: [
-                        { loader: "css-loader", options: { minimize: false, url: false } },
+                        { loader: "css-loader",
+                        options: { minimize: false,
+                            url: false } },
                         "sass-loader"
                     ]
-                },
+                }
             ]
         },
         plugins: [
             // Define useful constants like TNS_WEBPACK
             new webpack.DefinePlugin({
                 "global.TNS_WEBPACK": "true",
-                "process": undefined,
+                "process": undefined
             }),
             // Remove all files from the out dir.
-            new CleanWebpackPlugin([ `${dist}/**/*` ]),
+            new CleanWebpackPlugin([`${dist}/**/*`]),
             // Copy assets to out dir. Add your own globs as needed.
             new CopyWebpackPlugin([
                 { from: { glob: "fonts/**" } },
                 { from: { glob: "**/*.jpg" } },
-                { from: { glob: "**/*.png" } },
+                { from: { glob: "**/*.png" } }
             ], { ignore: [`${relative(appPath, appResourcesFullPath)}/**`] }),
             // Generate a bundle starter script and activate it in package.json
             new nsWebpack.GenerateBundleStarterPlugin(
@@ -223,11 +229,11 @@ module.exports = env => {
             new NativeScriptWorkerPlugin(),
             new nsWebpack.PlatformFSPlugin({
                 platform,
-                platforms,
+                platforms
             }),
             // Does IPC communication with the {N} CLI to notify events when running in watch mode.
-            new nsWebpack.WatchStateLoggerPlugin(),
-        ],
+            new nsWebpack.WatchStateLoggerPlugin()
+        ]
     };
 
     // Copy the native app resources to the out dir
@@ -238,7 +244,7 @@ module.exports = env => {
                 from: `${appResourcesFullPath}/${appResourcesPlatformDir}`,
                 to: `${dist}/App_Resources/${appResourcesPlatformDir}`,
                 context: projectRoot
-            },
+            }
         ]));
     }
 
