@@ -1,4 +1,5 @@
 <Page
+loaded="pageLoaded"
     class="page"
     navigatingTo="onNavigatingTo"  
     xmlns="http://schemas.nativescript.org/tns.xsd"
@@ -12,6 +13,26 @@
     <GridLayout class="page-content">
         <Label class="page-icon fa" text="&#xf279;"></Label>
         <Label class="page-placeholder" text="Trip Planner"></Label>
+
+
+
+	<!-- <ActionBar title="Geolocation" class="action-bar" /> -->
+	<ScrollView>
+		<StackLayout class="home-panel">
+			<Image src="~/images/map-marker-icon.png" height="60" />
+			<Button text="Get My Location" tap="{{ getLocation }}" class="btn btn-primary" />
+
+			<Label text="{{ 'Latitude: ' + lat }}" class="lbl" />
+			<Label text="{{ 'Longitude: ' + lon }}" class="lbl" />
+			<Label text="{{ 'Speed: ' + speed }}" class="lbl" />
+			<Label text="{{ 'Address: ' + addr }}" class="lbl" textWrap="true" />
+		</StackLayout>
+	</ScrollView>
+
+
+
+
+
 
 <!-- ADDED NEW CHANGES -->
     <!-- <maps:mapView latitude="{{ latitude }}" longitude="{{ longitude }}"

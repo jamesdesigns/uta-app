@@ -1,5 +1,9 @@
 const observableModule = require("tns-core-modules/data/observable");
 
+let geolocation = require("nativescript-geolocation");
+
+
+
 // This is THE ADDED CHANGES
 // const observable = require("tns-core-modules/data/observable");
 // const HelloWorldModel = (function (_super) {
