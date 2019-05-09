@@ -9,6 +9,6 @@
     </ActionBar>
 
     <GridLayout>
-        <Label class="m-10 h3" text="{{ description }}" verticalAlignment="top" ></Label>
+        <Label class="m-20 h3 text-center" text="{{ description }}" verticalAlignment="top" ></Label>
     </GridLayout>
 </Page>
