@@ -10,7 +10,7 @@
         <Label class="action-bar-title" text="UTA Motion"></Label>
     </ActionBar>
 
-	<ScrollView>
+	<!-- <ScrollView>
 		<StackLayout class="home-panel">
 			<Image src="~/images/map-marker-icon.png" height="60" />
 			<Button text="Get My Location" tap="{{ getLocation }}" class="btn btn-primary" />
@@ -20,15 +20,15 @@
 			<Label text="{{ 'Speed: ' + speed }}" class="lbl" />
 			<Label text="{{ 'Address: ' + addr }}" class="lbl" textWrap="true" />
 		</StackLayout>
-	</ScrollView>
+	</ScrollView> -->
 
-    <!-- <ListView items="{{ items }}" itemTap="onItemTap" class="list-group">
+    <ListView items="{{ items }}" itemTap="onItemTap" class="list-group">
         <ListView.itemTemplate>
             <StackLayout orientation="horizontal" class="list-group-item">
                 <Label text="{{ name }}" textWrap="true"></Label>
             </StackLayout>
         </ListView.itemTemplate>
-    </ListView> -->
+    </ListView>
 
 <!-- Adding the MapView -->
 
