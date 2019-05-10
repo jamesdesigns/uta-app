@@ -11,8 +11,8 @@ loaded="pageLoaded"
     </ActionBar>
 
     <GridLayout class="page-content">
-        <!-- <Label class="page-icon fa" text="&#xf279;"></Label>
-        <Label class="page-placeholder" text="Trip Planner"></Label> -->
+        <!-- <Label class="page-icon fa" text="&#xf279;"></Label> -->
+       <!-- <Label class="page-placeholder" text="Trip Planner"></Label> -->
 
 
 

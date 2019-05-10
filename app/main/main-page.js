@@ -1,4 +1,4 @@
-var mapsModule = require("nativescript-google-maps-sdk");
+const mapsModule = require("nativescript-google-maps-sdk");
 
 function onMapReady(args) {
   const mapView = args.object;
@@ -16,15 +16,15 @@ function onMapReady(args) {
 }
 
 function onMarkerSelect(args) {
-   console.log("Clicked on " +args.marker.title);
+  //  console.log("Clicked on " +args.marker.title);
 }
 
 function onCameraChanged(args) {
-    console.log("Camera changed: " + JSON.stringify(args.camera)); 
+    // console.log("Camera changed: " + JSON.stringify(args.camera));
 }
 
 function onCameraMove(args) {
-    console.log("Camera moving: "+JSON.stringify(args.camera));
+    // console.log("Camera moving: "+JSON.stringify(args.camera));
 }
 
 exports.onMapReady = onMapReady;

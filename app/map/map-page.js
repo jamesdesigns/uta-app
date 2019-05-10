@@ -1,6 +1,6 @@
 const MapViewModel = require("./map-view-model");
 const geolocation = require("nativescript-geolocation");
-const EventData = require("tns-core-modules/data/observable")
+// const EventData = require("tns-core-modules/data/observable");
 
 
 geolocation.enableLocationRequest();

@@ -13,6 +13,10 @@ http://docs.nativescript.org/cookbook/ui/tab-view
         <Frame defaultPage="map/map-page"></Frame>
     </TabViewItem>
 
+    <!-- <TabViewItem title="Location" ios:iconSource="res://tabIcons/map" android:iconSource="res://map">
+        <Frame defaultPage="main/main-page"></Frame>
+    </TabViewItem> -->
+
     <TabViewItem title="Near Me" ios:iconSource="res://tabIcons/map-marker" android:iconSource="res://map-marker">
         <Frame defaultPage="browse/browse-page"></Frame>
     </TabViewItem>

@@ -1,7 +1,6 @@
 const observableModule = require("tns-core-modules/data/observable");
 
-let geolocation = require("nativescript-geolocation");
-
+const geolocation = require("nativescript-geolocation");
 
 
 // This is THE ADDED CHANGES
